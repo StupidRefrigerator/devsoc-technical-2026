@@ -37,10 +37,10 @@ You are given the freedom to choose how you recreate this.
 
 The sample data shown in the image is provided both in the `data.json` file and below in the [Appendix](#appendix) in `JSON` format.
 
-The [Freerooms](./assets/freeroomsLogo.png) icon has been provided as a `png`. The photos of the buildings have also been provided in the [assets](./assets/) folder. The rest of the assets are taken from a library which has been provided below for your convenience.
+The [Freerooms](public/assets/freeroomsLogo.png) icon has been provided as a `png`. The photos of the buildings have also been provided in the [assets](public/assets/) folder. The rest of the assets are taken from a library which has been provided below for your convenience.
 
 - Navbar: [Google Fonts](https://fonts.google.com/icons), from top to bottom:
-  - [Freerooms](./assets/freeroomsLogo.png)
+  - [Freerooms](public/assets/freeroomsLogo.png)
   - Search
   - Map
   - Grid View
@@ -53,7 +53,7 @@ The [Freerooms](./assets/freeroomsLogo.png) icon has been provided as a `png`. T
 ### Stretch Task 1
 The goal of this part is for you to demonstrate component state management. When you click on the Freerooms logo, if it is closed, 'open' the door, and if it is open, 'close' the door.
 
-The open and close door versions of the logo are in [assets](./assets/) folder.
+The open and close door versions of the logo are in [assets](public/assets/) folder.
 
 ### Stretch Task 2
 For this task, ensure that your site is fully **responsive** across various screen sizes and desktop views. All elements should adjust dynamically while maintaining a visually appealing layout.
