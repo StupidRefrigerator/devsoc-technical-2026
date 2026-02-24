@@ -45,8 +45,27 @@ app.post("/parse", (req:Request, res:Response) => {
 // [TASK 1] ====================================================================
 // Takes in a recipeName and returns it in a form that 
 const parse_handwriting = (recipeName: string): string | null => {
-  // TODO: implement me
-  return recipeName
+    // replace all hyphens and underscores with spaces
+    // necessary to have space between words for string splitting
+    let result = recipeName.replace(/[-_]/g, ' ');
+
+    // keep just alphabet and spaces
+    result = result.replace(/[^a-zA-Z ]/g, '');
+
+    // split into 2 words
+    const words = result.split(' ').filter(word => word.length > 0);
+    if (words.length === 0) {
+        return null;
+    }
+
+    // capitalize the first letter, join words and return
+    return words
+        .map(word => {
+            const firstLetter = word.charAt(0).toUpperCase();
+            const rest = word.slice(1).toLowerCase();
+            return firstLetter + rest;
+        })
+        .join(' ');
 }
 
 // [TASK 2] ====================================================================
