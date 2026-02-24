@@ -1,12 +1,24 @@
+"use client";
+
+import React, { useState } from "react";
 import { Search, Map, Grid, Moon } from "lucide-react";
 
 const Header: React.FC = () => {
+  const [isDoorOpen, setIsDoorOpen] = useState(true);
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 px-4 py-2 flex items-center justify-between shadow-sm h-16">
       {/* logo */}
-      <div className="flex items-center gap-2 cursor-pointer">
+      <div
+        className="flex items-center gap-2 cursor-pointer"
+        onClick={() => setIsDoorOpen(!isDoorOpen)}
+      >
         <img
-          src={"/assets/freeRoomsLogo.png"}
+          src={
+            isDoorOpen
+              ? "/assets/freeRoomsLogo.png"
+              : "/assets/freeroomsDoorClosed.png"
+          }
           alt="Freerooms Logo"
           className="h-10 w-10"
         />
