@@ -1,5 +1,6 @@
 import React from "react";
 import BuildingCard from "../components/BuildingCard";
+import FilterSection from "../components/FilterSection";
 import buildingsData from "../data/buildings.json";
 
 interface Building {
@@ -14,6 +15,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white p-6">
       <div className="mx-auto">
+        {/* top filter section */}
+        <FilterSection />
+
         {/* responsive grid with corresponding columns */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {/* for each building, get the correct image path and use it in the BuildingCard component */}
